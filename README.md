@@ -1,5 +1,7 @@
 # Zip Cracker
 
+[![go](https://github.com/claudemuller/zip-cracker.go/actions/workflows/go.yml/badge.svg)](https://github.com/claudemuller/zip-cracker.go/actions/workflows/go.yml)
+
 ![cracker](image.jpg)
 
 A .zip password cracker written in Go.
