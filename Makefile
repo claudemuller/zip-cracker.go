@@ -1,5 +1,5 @@
 run:
-	go run ./cmd/main.go ./data/test.zip
+	go run ./cmd/main.go $(ARGS)
 
 gen-test-file:
 	@mkdir -p data

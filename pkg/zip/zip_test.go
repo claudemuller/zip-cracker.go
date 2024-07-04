@@ -1,11 +1,11 @@
-package crack_test
+package zip_test
 
 import (
-	"archive/zip"
+	z "archive/zip"
 	"bytes"
 	"testing"
 
-	"github.com/claudemuller/zip-cracker/pkg/crack"
+	"github.com/claudemuller/zip-cracker/pkg/zip"
 )
 
 func TestIsZip(t *testing.T) {
@@ -24,7 +24,7 @@ func TestIsZip(t *testing.T) {
 			// Setup...
 
 			// When...
-			got, err := crack.IsZip(bytes.NewReader(tt.data))
+			got, err := zip.IsZip(bytes.NewReader(tt.data))
 			if err != nil {
 				t.Fail()
 			}
@@ -44,10 +44,10 @@ func genZipData(filename, data string, compress bool) []byte {
 
 	var buf bytes.Buffer
 
-	zw := zip.NewWriter(&buf)
-	header := zip.FileHeader{
+	zw := z.NewWriter(&buf)
+	header := z.FileHeader{
 		Name:   filename,
-		Method: zip.Deflate,
+		Method: z.Deflate,
 	}
 
 	fw, err := zw.CreateHeader(&header)

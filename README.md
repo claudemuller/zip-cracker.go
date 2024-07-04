@@ -1,6 +1,6 @@
-![cracker](image.jpg)
-
 # Zip Cracker
+
+![cracker](image.jpg)
 
 A .zip password cracker written in Go.
 
@@ -8,6 +8,14 @@ A .zip password cracker written in Go.
 
 ```bash
 make gen-test-file
+```
+
+## Run
+
+### Dictionary Attack
+
+```bash
+make run ARGS="-file <the_zip_file.zip> -wordlist <the_wordlist.txt>"
 ```
 
 ## Run Tests
